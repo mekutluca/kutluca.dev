@@ -19,8 +19,13 @@
 
 */
 :root {
-    --primary_color: #5B78F6;
-    --dark: #323232;
+    --primary_color: #A5D7E8;
+    --dark: #57C5B6;
+
+    --bg: #0B2447;
+    --shadow: #19376D;
+    --onemsiz-text: #A5D7E8;
+    --cta: #576CBC;
 }
 *,*::before,*::after {
     margin: 0;
@@ -32,8 +37,8 @@ body {
     font-family: 'Lexend Deca', sans-serif;
     font-size: 14px;
     scroll-behavior: smooth;
-    color: #9f9f9f;
-    background: #0F0F0F;
+    color: var(--onemsiz-text);
+    background: var(--bg);
     line-height: 19.2px;
 }
 img {
@@ -93,6 +98,9 @@ a {
     animation: preloader_slide 0.5s ease-in-out 0s 1 reverse both
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--onemsiz-text);
+}
 
 
 /* # Margin */
@@ -129,7 +137,7 @@ ol {
 .shadow-box {
     position: relative;
     border-radius: 30px;
-    background: #0F0F0F;
+    background: var(--shadow);
 }
 .shadow-box::after {
     content: '';
@@ -228,7 +236,7 @@ ol {
     margin: auto auto 16px auto;
 }
 .info-box .infos h4 {
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     font-size: 12px;
     opacity: 0.5;
     margin-bottom: 6px;
@@ -333,7 +341,7 @@ ol {
 }
 .info-box.about-client-box .clients .client-item p {
     font-size: 12px;
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     opacity: 0.5;
     margin: 0;
     text-transform: uppercase;
@@ -384,7 +392,7 @@ ol {
     padding-top: 77px;
 }
 .breadcrumb-area .breadcrumb-content p {
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     opacity: 0.7;
     margin-bottom: 24px;
 }
@@ -501,7 +509,7 @@ ol {
     position: initial;
 }
 .about-area .about-me-box .infos h4 {
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     opacity: 0.7;
     font-size: 14px;
     letter-spacing: 0.3px;
@@ -548,7 +556,11 @@ ol {
     will-change: transform;
     font-size: 12px;
 
-    animation: marquee 8s linear infinite;
+    animation: marquee 60s linear infinite;
+
+    &:hover {
+        animation-play-state: paused;
+    }
 }
 
 .about-area .about-credentials-wrap .banner .marquee b {
@@ -615,7 +627,7 @@ ol {
     margin-top: 32px;
 }
 .about-area .about-edc-exp ul li .date {
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     opacity: 0.6;
     font-size: 16px;
     font-weight: 500;
@@ -628,7 +640,7 @@ ol {
     margin-bottom: 7px;
 }
 .about-area .about-edc-exp ul li .type {
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     font-size: 14px;
     opacity: 0.6;
     font-weight: 400;
@@ -665,7 +677,7 @@ ol {
     border-radius: 30px;
 }
 .projects-area .project-item .project-info p {
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     opacity: 0.5;
     font-size: 14px;
     text-transform: uppercase;
@@ -745,7 +757,7 @@ ol {
     margin-bottom: 0;
 }
 .project-details-wrap .project-infos-wrap .project-details-info h3 {
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     opacity: 0.5;
     font-size: 18px;
     text-transform: uppercase;
@@ -789,7 +801,7 @@ ol {
     margin-top: 27px;
 }
 .project-details-wrap .project-about-2 .left-details ul li p {
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     font-size: 18px;
     opacity: 0.6;
     margin-bottom: 10px;
@@ -802,7 +814,7 @@ ol {
 }
 .project-details-wrap .project-about-2 .right-details h3 {
     font-size: 18px;
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     opacity: 0.5;
     margin-bottom: 17px;
 }
@@ -864,7 +876,7 @@ ol {
     border-radius: 30px;
 }
 .credential-area .credential-sidebar p {
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     opacity: 0.5;
     font-size: 16px;
     margin-bottom: 34px;
@@ -932,7 +944,7 @@ ol {
     margin-top: 58px;
 }
 .credential-area .credential-edc-exp .credential-edc-exp-item h4 {
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     opacity: 0.6;
     font-size: 16px;
     font-weight: 500;
@@ -943,7 +955,7 @@ ol {
 }
 .credential-area .credential-edc-exp .credential-edc-exp-item h5 {
     font-size: 14px;
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     opacity: 0.6;
     font-weight: 400;
 }
@@ -967,7 +979,7 @@ ol {
     width: 50%;
 }
 .credential-area .skills-wrap .skill-item .percent {
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     opacity: 0.6;
     display: block;
     font-weight: 500;
@@ -980,7 +992,7 @@ ol {
     margin-bottom: 4px;
 }
 .credential-area .skills-wrap .skill-item p {
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     opacity: 0.6;
     font-size: 14px;
     margin: 0;
@@ -1046,7 +1058,7 @@ ol {
     padding: 24px 47px 59px 30px;
 }
 .service-area .service-content-wrap .service-content-inner .service-item h3 {
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     font-size: 15px;
     font-weight: 500;
     opacity: 0.56;
@@ -1125,7 +1137,7 @@ ol {
     opacity: 0.8;
 }
 .blog-sidebar .blog-sidebar-inner .blog-sidebar-widget h3 {
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     opacity: 0.5;
     font-size: 18px;
     text-transform: uppercase;
@@ -1408,7 +1420,7 @@ ol {
 }
 .contact-area .contact-infos .contact-details li .right span {
     display: block;
-    color: #BCBCBC;
+    color: var(--onemsiz-text);
     font-size: 14px;
     opacity: 0.5;
     text-transform: uppercase;
@@ -1969,4 +1981,8 @@ ol {
     .blog-details-area .blog-details-content .comments-and-form-wrap .comments .children {
         padding-left: 0;
     }
+}
+
+li.link {
+    cursor: pointer;
 }
