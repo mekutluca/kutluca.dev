@@ -19,4 +19,8 @@ function sendMail() {
      ;
 }
 
+function other() {
+    console.log("other")
+}
+
 console.log("loaded")
