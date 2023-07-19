@@ -102,16 +102,18 @@
                             <img src="./assets/images/bg1.png" alt="BG" class="bg-img">
                             <img src="./assets/images/icon3.png" alt="Icon">
                             <h1>Let’s work <span>together.</span></h1>
-                            <form action="mailer.php">
+                            <form >
                                 <div class="alert alert-success messenger-box-contact__msg" style="display: none" role="alert">
                                     Your message was sent successfully.
                                 </div>
                                 <div class="input-group">
                                     <input type="text" name="full-name" id="full-name" placeholder="Name *">
                                 </div>
+                                <!--
                                 <div class="input-group">
                                     <input type="email" name="email" id="email" placeholder="Email *">
                                 </div>
+                                -->
                                 <div class="input-group">
                                     <input type="text" name="subject" id="subject" placeholder="Your Subject *">
                                 </div>
@@ -119,7 +121,7 @@
                                     <textarea name="message" id="message" placeholder="Your Message *"></textarea>
                                 </div>
                                 <div class="input-group">
-                                    <button class="theme-btn submit-btn" name="submit" type="submit" onclick="">Send Message</button>
+                                    <button class="theme-btn submit-btn" name="submit" type="submit" onclick="mailer()">Send Message</button>
                                 </div>
                             </form>
                         </div>
@@ -158,5 +160,6 @@
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/ajax-form.js"></script>
+    <script src="./assets/js/contact.js"></script>
 </body>
 </html>
