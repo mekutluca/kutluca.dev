@@ -18,3 +18,5 @@ function sendMail() {
      .catch(err => console.log(err));
      ;
 }
+
+console.log("loaded")
